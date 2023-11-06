@@ -40,6 +40,12 @@ public class AppConfig {
 		props.put(HBM2DDL_AUTO, env.getProperty("hiernate.hbm2ddl.auto"));
 		
 		
+		props.put(C3P0_MIN_SIZE, env.getProperty("hibernate.c3p0.min_size"));
+		props.put(C3P0_MAX_SIZE, env.getProperty("hibernate.c3p0.max_size"));
+		props.put(C3P0_ACQUIRE_INCREMENT, env.getProperty("hibernate.c3p0.acquire_increment"));
+		props.put(C3P0_TIMEOUT, env.getProperty("hibernate.c3p0.timeout"));
+		props.put(C3P0_MAX_STATEMENT, env.getProperty("hibernate.c3p0.max_statements"));
+		
 		
 		
 		
