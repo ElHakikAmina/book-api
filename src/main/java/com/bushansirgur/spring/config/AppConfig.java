@@ -15,7 +15,7 @@ public class AppConfig {
 	
 	@Bean
 	public LocalSessionFactoryBean getSessionFactory() {
-		
+		LocalSessionFactoryBean factoryBean =  new LocalSessionFactoryBean(); 
 	}
 	
 	
