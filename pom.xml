@@ -7,4 +7,13 @@
   <properties>
 	  <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
+  
+  
+  <dependencies>
+	  <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-webmvc</artifactId>
+		  <version>4.3.10.RELEASE</version>
+	  </dependency>
+  </dependencies>
 </project>
