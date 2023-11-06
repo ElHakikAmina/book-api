@@ -3,4 +3,8 @@
   <groupId>com.bushansirgur</groupId>
   <artifactId>bookapi</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+	  <failOnMissingWebXml>false</failOnMissingWebXml>
+  </properties>
 </project>
