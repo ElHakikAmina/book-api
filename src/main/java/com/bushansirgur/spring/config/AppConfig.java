@@ -36,7 +36,8 @@ public class AppConfig {
 		props.put(PASS,  env.getProperty("mysql.password"));
 		
 		
-		
+		props.put(SHOW_SQL, env.getProperty("hibernate.show_sql"));
+		props.put(HBM2DDL_AUTO, env.getProperty("hiernate.hbm2ddl.auto"));
 		
 		
 		
