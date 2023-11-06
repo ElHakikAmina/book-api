@@ -1,6 +1,7 @@
 package com.bushansirgur.spring.config;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.PropertySource;
@@ -52,17 +53,16 @@ public class AppConfig {
 		
 		
 		return factoryBean;
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
+	}
+	
+	
+	@Bean
+	public HibernateTransactionManager getTransactionManger()
+	{
+		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+		transactionManager.setSessionFactory(getSessionFactory().getObject());
+		return transactionManager;
 	}
 	
 	
