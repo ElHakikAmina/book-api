@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.bushansirgur.spring.model.Book;
 
+
+@Repository
 public class BookDAOImpl implements BookDAO{
 	
 	@Autowired
