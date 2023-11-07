@@ -1,0 +1,4 @@
+com\bushansirgur\spring\model\Book.class
+com\bushansirgur\spring\config\MyWebAppInitializer.class
+com\bushansirgur\spring\config\WebConfig.class
+com\bushansirgur\spring\config\AppConfig.class
