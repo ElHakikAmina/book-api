@@ -17,9 +17,9 @@ public class BookServiceImpl implements BookService{
 	private BookDAO bookDAO;
 
 	@Override
+	@Transactional
 	public long save(Book book) {
-		// TODO Auto-generated method stub
-		return 0;
+		return bookDAO.save(book);
 	}
 
 	@Override
