@@ -2,6 +2,7 @@ package com.bushansirgur.spring.dao;
 
 import java.util.List;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -36,8 +37,11 @@ public class BookDAOImpl implements BookDAO{
 
 	@Override
 	public void update(long id, Book book) {
-		// TODO Auto-generated method stub
-		
+		Session session = sessionFactory.getCurrentSession();
+		Book oldBook = sesion.byId(Book.class).load(id);
+		oldBook.setTitle(book.getTitle());
+		oldBook.setAutor(book.getAuthor());
+		session.flush();
 	}
 
 	@Override

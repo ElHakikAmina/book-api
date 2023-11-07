@@ -37,8 +37,9 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
+	@Transactional
 	public void update(long id, Book book) {
-		// TODO Auto-generated method stub
+		bookDAO.update(id,book);
 		
 	}
 

@@ -38,6 +38,18 @@ public class BookController {
 		return ResponseEntity.ok().body(book);
 	}
 	
+	@GetMapping("/api/book/{id}")
+	public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody Book book)
+	{
+		bookService.update(id, book);
+		return ResponseEntity.ok().body("Book has been updated");
+	}
+	
+	
+	
+	
+	
+	
 	
 
 }
