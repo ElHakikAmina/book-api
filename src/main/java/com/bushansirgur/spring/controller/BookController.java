@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.bushansirgur.spring.model.Book;
 import com.bushansirgur.spring.service.BookService;
@@ -21,5 +23,16 @@ public class BookController {
 		List<Book> list = bookService.list();
 		return ResponseEntity.ok().body(list);
 	}
+	
+	@PostMapping("/api/book")
+	public ResponseEntity<?> save(@RequestBody Book book){
+		long id = bookService.save(book);
+		return ResponseEntity.ok().body("Book created with id:"+id);
+	}
+	
+	
+	
+	
+	
 
 }
