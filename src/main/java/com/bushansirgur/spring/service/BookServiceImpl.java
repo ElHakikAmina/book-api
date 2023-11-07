@@ -23,9 +23,11 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
+	@Transactional
 	public Book get(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return bookDAO.get(id);
+		
 	}
 
 	@Override
