@@ -26,7 +26,8 @@ public class BookDAOImpl implements BookDAO{
 
 	@Override
 	public List<Book> list() {
-		sessionFactory 
+		List<Book> list = sessionFactory.getCurrentSession().createQuery("from Book").list();
+		return list;
 	}
 
 	@Override
